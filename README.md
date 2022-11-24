@@ -1,0 +1,2 @@
+# vanilla_JavaScript_Project
+ nayeons's_VanillaJS_Project_with_namad
