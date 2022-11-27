@@ -1,3 +1,7 @@
-body{
-    background-color: rgb(223, 236, 149);
-}
+ .hidden{
+    display: none;
+ }
+
+ h1{
+    transition: all 2s ease-in;
+ }

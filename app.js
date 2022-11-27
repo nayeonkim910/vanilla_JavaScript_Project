@@ -1,14 +1,19 @@
-const age = parseInt(prompt("How old are you"));
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
-if(isNaN(age)|| age<0){
-    console.log("Please write a Positive number");
-}else if(age<18){
-    console.log("you are too young");
-}else if(age >=18 && age <=50){
-    console.log("you are not kids. anymore");
-}else if(age >50 && age<=80){
-    console.log("you should excercise");
+
+const HIDDEN_CLASSNAME = "hidden";
+
+function loginSubmit(event){ 
+    
+    event.preventDefault();
+    const userName = loginInput.value;  
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    localStorage.setItem("userName", userName);    
+    greeting.innerText = `Hello ${userName} :) `;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-else{
-    console.log("You can drink");
-}
+loginForm.addEventListener("submit", loginSubmit);
+
+ 
